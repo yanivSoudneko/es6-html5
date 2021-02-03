@@ -1,0 +1,11 @@
+.main-table {
+    /* border: 1px solid black; */
+    width: 600px;
+    height: 200px;
+}
+
+.main-table td {
+    border: 2px solid transparent;
+    width: 10px;
+    height: 10px;
+}

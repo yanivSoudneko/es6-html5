@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/user-pref.css">
+    <title>User prefs</title>
+</head>
+
+<body>
+    <header contenteditable>
+        <h1> Choose your own prefernces</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='user-prefs.html'>About</a></li>
+            <li><a href='map.html'>Lets travel</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form id="frmpref" contenteditable onchange="updateFirst()" onsubmit="onSetUserPref(event)">
+            <table>
+                <tr>
+                    <td><label name="color">Background color</label></td>
+                    <td><input type="color" name="color" id="color"></td>
+                </tr>
+                <tr>
+                    <td> <label name="TextColor">TextColor</label></td>
+                    <td><input type="color" name="TextColor" id="textColor"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">E-mail:</label></td>
+                    <td><input type="email" name="email" autocomplete="off" required/></td>
+                </tr>
+                <tr>
+
+                    <td><label for="dob">Date of Birth:</label></td>
+                    <td><input type="date" id="dob" name="dob" /></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Age:</label></td>
+                    <td><input type="range" id="age" name="age" min="18" max="120" value="26" onchange="showAge(this.value);" />
+                        <span id="sAge">26</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="time">Time of Birth:</label></td>
+                    <td><input type="time" id="time"></td>
+                </tr>
+            </table>
+            <button>submit</button>
+        </form>
+
+    </main>
+    <script src="js/storage-service.js"></script>
+    <script src="js/serice-user.js"></script>
+    <script src="js/user-pref.js"></script>
+</body>
+
+</html>
